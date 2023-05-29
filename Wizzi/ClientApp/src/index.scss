@@ -1,0 +1,24 @@
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea:valid, input:valid {
+    text-transform: uppercase;
+}
+
+.noUpperCase {
+    input {
+        text-transform: none;
+    }
+}
+
+.react-tooltip-lite {
+    background: rgb(255, 255, 255);
+    color: white;
+  }
+  
+  .react-tooltip-lite-arrow {
+    border-color: #333;
+  }

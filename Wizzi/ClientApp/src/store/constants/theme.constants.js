@@ -1,0 +1,1 @@
+export const CAMBIAR_TEMA = 'CAMBIAR_TEMA';

@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "server=localhost;port=3306;user=root;password=pass;database=wizzi;SslMode=None;default command timeout=240;Connection TimeOut=60;" Pomelo.EntityFrameworkCore.MySql -OutputDir Entities -Context DataContext -ContextDir Helpers -f -v
