@@ -22,7 +22,7 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
 # RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
 #     apt-get install -y nodejs
 
-WORKDIR /src
+#WORKDIR /src
 COPY ["Wizzi/Wizzi.csproj", "Wizzi/"]
 RUN dotnet restore "Wizzi/Wizzi.csproj"
 COPY . .
