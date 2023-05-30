@@ -24,7 +24,7 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
 
 WORKDIR /src
 COPY ["Wizzi/Wizzi.csproj", "Wizzi/"]
-RUN dotnet restore "Wizzi/Wizzi.csproj"
+RUN dotnet restore "Wizzi.csproj"
 COPY . .
 WORKDIR "/src/Wizzi"
 RUN dotnet build "Wizzi.csproj" -c Release -o /app/build
