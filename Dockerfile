@@ -22,5 +22,16 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
 # RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
 #     apt-get install -y nodejs
 
+WORKDIR /src
+COPY ["Wizzi/Wizzi.csproj", "Wizzi/"]
+RUN dotnet restore "Wizzi/Wizzi.csproj"
+COPY . .
+WORKDIR "/src/Wizzi"
+RUN dotnet build "Wizzi.csproj" -c Release -o /app/build
+RUN npm i -g sass
+RUN npm update
+# RUN npm audit fix
+
+
 
 
