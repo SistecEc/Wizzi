@@ -33,10 +33,10 @@ RUN npm i -g sass
 RUN npm update
 # RUN npm audit fix
 
-# FROM build AS publish
-# RUN dotnet publish "Wizzi.csproj" -c Release -o /app/publish
-# RUN npm i -g sass
-# RUN npm update
+FROM build AS publish
+RUN dotnet publish "Wizzi.csproj" -c Release -o /app/publish
+RUN npm i -g sass
+RUN npm update
 # RUN npm audit fix
 
 FROM base AS final
